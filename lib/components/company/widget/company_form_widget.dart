@@ -89,7 +89,7 @@ class _CompanyFormWidgetState extends State<CompanyFormWidget> {
             }
           }
         } else {
-          log('Not a new company creation, skipping checkout trigger');
+          _log('Not a new company creation, skipping checkout trigger');
         }
       },
       child: BlocBuilder<CompanyFormBloc, CompanyFormState>(

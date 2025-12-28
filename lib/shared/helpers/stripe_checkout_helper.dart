@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/foundation.dart';
 
 import 'package:url_launcher/url_launcher.dart';
@@ -17,10 +15,14 @@ class StripeCheckoutHelper {
     required String companyId,
   }) async {
     try {
-      log('=== STRIPE CHECKOUT HELPER ===');
-      log('Company ID: $companyId');
-      log('Success URL: ${_getSuccessUrl()}');
-      log('Cancel URL: ${_getCancelUrl()}');
+      // ignore: avoid_print
+      print('=== STRIPE CHECKOUT HELPER ===');
+      // ignore: avoid_print
+      print('Company ID: $companyId');
+      // ignore: avoid_print
+      print('Success URL: ${_getSuccessUrl()}');
+      // ignore: avoid_print
+      print('Cancel URL: ${_getCancelUrl()}');
 
       final checkoutUrl = await _subscriptionService.createCheckoutSession(
         companyId: companyId,
@@ -28,10 +30,12 @@ class StripeCheckoutHelper {
         cancelUrl: _getCancelUrl(),
       );
 
-      log('Checkout URL received: $checkoutUrl');
+      // ignore: avoid_print
+      print('Checkout URL received: $checkoutUrl');
 
       if (checkoutUrl == null) {
-        log('ERROR: Checkout URL is null');
+        // ignore: avoid_print
+        print('ERROR: Checkout URL is null');
         throw StripeCheckoutException('Failed to create checkout session');
       }
 
@@ -45,21 +49,27 @@ class StripeCheckoutHelper {
         webOnlyWindowName: '_blank',
       );
 
-      log('URL launched successfully: $launched');
+      // ignore: avoid_print
+      print('URL launched successfully: $launched');
 
       if (!launched) {
-        log('ERROR: Failed to launch URL');
+        // ignore: avoid_print
+        print('ERROR: Failed to launch URL');
         throw StripeCheckoutException(
           'Failed to open Stripe Checkout. Please check your browser settings.',
         );
       }
 
-      log('=== CHECKOUT HELPER SUCCESS ===');
+      // ignore: avoid_print
+      print('=== CHECKOUT HELPER SUCCESS ===');
       return true;
     } catch (e) {
-      log('=== CHECKOUT HELPER ERROR ===');
-      log('Error: $e');
-      log('Error type: ${e.runtimeType}');
+      // ignore: avoid_print
+      print('=== CHECKOUT HELPER ERROR ===');
+      // ignore: avoid_print
+      print('Error: $e');
+      // ignore: avoid_print
+      print('Error type: ${e.runtimeType}');
       if (e is StripeCheckoutException) {
         rethrow;
       }

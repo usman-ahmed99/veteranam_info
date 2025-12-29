@@ -1,6 +1,3 @@
-import 'dart:js_interop';
-
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -92,8 +89,6 @@ class _CompanyFormWidgetState extends State<CompanyFormWidget> {
               }
             }
           }
-        } else {
-          _log('Not a new company creation, skipping checkout trigger');
         }
       },
       child: BlocBuilder<CompanyFormBloc, CompanyFormState>(

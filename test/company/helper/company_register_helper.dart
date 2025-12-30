@@ -5,6 +5,7 @@ import 'package:mockito/mockito.dart';
 import 'package:veteranam/shared/bloc/subscription_checkout/subscription_checkout_cubit.dart';
 import 'package:veteranam/shared/shared_dart.dart';
 
+import 'package:veteranam/shared/shared_dart.dart';
 import '../../test_dependency.dart';
 
 late UserRepository mockUserRepository;

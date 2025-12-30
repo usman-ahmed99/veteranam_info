@@ -10,7 +10,12 @@ import 'package:freezed_annotation/freezed_annotation.dart'
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:injectable/injectable.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
+
 import 'package:veteranam/shared/shared_dart.dart';
+
+// import 'package:firebase_core/firebase_core.dart' as firebase_core;
+import 'package:freezed_annotation/freezed_annotation.dart'
+    show visibleForTesting;
 
 @Singleton(as: IAppAuthenticationRepository)
 class AppAuthenticationRepository implements IAppAuthenticationRepository {

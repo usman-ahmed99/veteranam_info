@@ -1,9 +1,5 @@
 import 'dart:developer' show log;
 
-import 'package:injectable/injectable.dart';
-
-import 'package:veteranam/shared/shared_dart.dart';
-
 import 'package:cloud_firestore/cloud_firestore.dart'
     show
         DocumentChangeType,

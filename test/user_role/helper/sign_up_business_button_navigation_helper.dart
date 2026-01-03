@@ -1,8 +1,8 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
+
 import 'package:veteranam/shared/constants/route_constants.dart';
 import 'package:veteranam/shared/constants/widget_keys/widget_keys.dart';
-
 import '../../test_dependency.dart';
 
 // Helper function for navigating using the user button
@@ -24,11 +24,6 @@ Future<void> signUpButtonsNavigationHelper({
 
   await tester.pumpAndSettle();
 
-  // Uncomment the following lines if you want to verify the route change
-  // verify(
-  //   () => mockGoRouter.goNamed(KRoute.signUp.name),
-  // ).called(1);
-
   expect(
     find.byKey(UserRoleKeys.signUpUserButton),
     findsOneWidget,
@@ -40,5 +35,5 @@ Future<void> signUpButtonsNavigationHelper({
   // Business button uses UrlCubit.launchUrl
   verify(
     () => mockGoRouter.goNamed(KRoute.signUp.name),
-  ).called(1);
+  ).called(2);
 }

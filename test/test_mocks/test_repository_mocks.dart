@@ -7,6 +7,7 @@ import 'package:device_info_plus/device_info_plus.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
+// import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:firebase_remote_config/firebase_remote_config.dart';
 import 'package:firebase_storage/firebase_storage.dart';
@@ -21,8 +22,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:veteranam/shared/bloc/subscription_checkout/subscription_checkout_cubit.dart';
 import 'package:veteranam/shared/services/subscription_service.dart';
 import 'package:veteranam/shared/shared_dart.dart';
-
-// import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 
 @GenerateNiceMocks(
   [

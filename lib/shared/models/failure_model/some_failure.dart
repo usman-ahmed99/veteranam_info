@@ -1,7 +1,6 @@
 import 'package:flutter/services.dart';
-import 'package:veteranam/shared/shared_dart.dart';
-
 // import 'package:veteranam/shared/constants/text/error_text.dart';
+import 'package:veteranam/shared/shared_dart.dart';
 
 part 'exceptions.dart';
 part 'some_failure_extension.dart';

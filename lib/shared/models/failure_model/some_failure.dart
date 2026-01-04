@@ -1,3 +1,5 @@
+import 'package:firebase_auth/firebase_auth.dart' as firebase;
+import 'package:firebase_core/firebase_core.dart' as firebase;
 import 'package:flutter/services.dart';
 // import 'package:veteranam/shared/constants/text/error_text.dart';
 import 'package:veteranam/shared/shared_dart.dart';

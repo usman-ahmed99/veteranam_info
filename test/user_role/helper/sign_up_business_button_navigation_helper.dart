@@ -35,5 +35,5 @@ Future<void> signUpButtonsNavigationHelper({
   // Business button uses UrlCubit.launchUrl
   verify(
     () => mockGoRouter.goNamed(KRoute.signUp.name),
-  ).called(2);
+  ).called(1);
 }
